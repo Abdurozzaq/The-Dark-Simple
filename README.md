@@ -7,8 +7,11 @@ For now there is only one page, namely the home page. But there will be further 
 
 ### My Profile:
 https://id.linkedin.com/in/abdurozzaqnh
+
 https://github.com/Abdurozzaq
+
 https://ozzaqdev.vercel.app/
+
 https://medium.com/ozzaq
 
 
