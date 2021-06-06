@@ -8,6 +8,8 @@ For now there is only one page, namely the home page. But there will be further 
 ### My Profile:
 https://id.linkedin.com/in/abdurozzaqnh
 
+https://the-dark-simple.vercel.app/
+
 https://github.com/Abdurozzaq
 
 https://ozzaqdev.vercel.app/
