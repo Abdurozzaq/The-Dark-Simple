@@ -63,7 +63,7 @@
 		>	
 			<v-container class="py-0 ml-0 fill-height">
 
-				<v-app-bar-nav-icon class="mr-2 x-small" v-if="$vuetify.breakpoint.smAndDown" @click="drawer = !drawer"></v-app-bar-nav-icon>
+				<v-app-bar-nav-icon class="mr-2 x-small" v-if="$vuetify.breakpoint.mdAndDown" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
 				<v-responsive max-width="500" v-if="$vuetify.breakpoint.mdAndUp">
 					<v-text-field

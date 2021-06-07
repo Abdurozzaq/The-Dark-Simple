@@ -5,7 +5,8 @@
       color="#1f1d2c"
       v-model="drawer"
       app
-			floating
+			floating="$vuetify.breakpoint.mdAndUp ? true : false"
+			mobile-breakpoint="960px"
     >
 
       <h2 class="my-4 text-center white--text francois-one">TheDarkSimple</h2>
@@ -64,7 +65,7 @@
       dark
 			elevation="0"
     >
-     <v-container class="py-0 ml-0 fill-height">
+     <v-container class="py-0 ml-0 fill-height text-center">
 
 				<v-app-bar-nav-icon class="mr-2 x-small" v-if="$vuetify.breakpoint.smAndDown" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
