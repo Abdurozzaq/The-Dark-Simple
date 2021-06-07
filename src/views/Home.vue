@@ -18,15 +18,19 @@
 						<v-img
 							src="/img/img1.jpg"
 							:aspect-ratio="10/3.85"
+							gradient="to top right, rgba(64,74,87,0.4318102240896359) 0%, rgba(46,52,61,0.4290091036414566) 100%"
 						>
 							<v-card-text class="pb-0">
 								<v-row>
-									<v-col cols="6" xs="12">
-										<h1 class="mx-4 text-glow-grey" style="line-height: 150%;">
+									<v-col cols="12" sm="12" md="6" lg='6'>
+										<h1 v-if="$vuetify.breakpoint.mdAndUp" class="mx-4 text-glow-grey" style="line-height: 150%;">
 											How to do basic jumping and how to landing safely 
 										</h1>
+										<h3 v-if="$vuetify.breakpoint.smAndDown" class="mx-4 text-glow-grey" style="line-height: 150%;">
+											How to do basic jumping and how to landing safely 
+										</h3>
 									</v-col>
-									<v-col cols="6" class="d-none d-sm-flex">
+									<v-col cols="6" v-if="$vuetify.breakpoint.mdAndUp">
 
 									</v-col>
 								</v-row>
@@ -40,7 +44,7 @@
 
 									<v-list-item-content>
 										<v-list-item-title class="text-glow-grey">Frag Sanderson</v-list-item-title>
-										<v-list-item-subtitle class="text-glow-grey">2.8K views | 2 weeks ago</v-list-item-subtitle>
+										<v-list-item-subtitle class="text-glow-grey">2.8K views</v-list-item-subtitle>
 									</v-list-item-content>
 								</v-list-item>
 							</v-card-title>
@@ -71,26 +75,30 @@
 						<v-img
 							src="/img/img2.jpg"
 							:aspect-ratio="$vuetify.breakpoint.smAndDown ? 2/0.5 : 1/0.8"
+							gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
 						>
 							<v-card-text class="pb-0">
 								<v-row v-if="$vuetify.breakpoint.smAndDown">
-									<v-col cols="6" xs="12">
-										<h1 class="mx-4 text-glow-grey" style="line-height: 150%;">
+									<v-col cols="12" sm="12" md="6" lg="6">
+										<h1 v-if="$vuetify.breakpoint.mdAndUp" class="mx-4 text-glow-grey" style="line-height: 150%;">
 											Skateboard tips you need to know
 										</h1>
+										<h3 v-if="$vuetify.breakpoint.smAndDown" class="mx-4 text-glow-grey" style="line-height: 150%;">
+											How to do basic jumping and how to landing safely 
+										</h3>
 									</v-col>
-									<v-col cols="6" class="d-none d-sm-flex">
+									<v-col cols="6" v-if="$vuetify.breakpoint.mdAndUp">
 
 									</v-col>
 								</v-row>
 
 								<v-row v-if="$vuetify.breakpoint.mdAndUp">
-									<v-col cols="8" xs="12">
+									<v-col cols="12" sm="12" md="8" lg="8">
 										<h3 class="mx-4 text-glow-grey" style="line-height: 150%;">
 											Skateboard tips you need to know
 										</h3>
 									</v-col>
-									<v-col cols="4" class="d-none d-sm-flex">
+									<v-col cols="4" v-if="$vuetify.breakpoint.mdAndUp">
 
 									</v-col>
 								</v-row>
@@ -104,7 +112,7 @@
 
 									<v-list-item-content>
 										<v-list-item-title class="text-glow-grey">James Hope</v-list-item-title>
-										<v-list-item-subtitle class="text-glow-grey">2.8K views | 2 weeks ago</v-list-item-subtitle>
+										<v-list-item-subtitle class="text-glow-grey">2.8K views</v-list-item-subtitle>
 									</v-list-item-content>
 								</v-list-item>
 							</v-card-title>
@@ -113,7 +121,7 @@
 								<v-list-item>
 									<v-list-item-content>
 										<v-list-item-title class="text-glow-grey">James Hope</v-list-item-title>
-										<v-list-item-subtitle class="text-glow-grey">2.8K views | 2 weeks ago</v-list-item-subtitle>
+										<v-list-item-subtitle class="text-glow-grey">2.8K views</v-list-item-subtitle>
 									</v-list-item-content>
 								</v-list-item>
 							</v-card-title>
@@ -187,7 +195,7 @@
 							</v-badge>
 						</v-card-subtitle>
 
-						<v-card-text class="text--primary pb-0">
+						<v-card-text class="text--primary pb-0 text-truncate">
 							Basic how to side your skateboard comfortly
 						</v-card-text>
 
@@ -234,7 +242,7 @@
 							</v-badge>
 						</v-card-subtitle>
 
-						<v-card-text class="text--primary pb-0">
+						<v-card-text class="text--primary pb-0 text-truncate">
 							Prepare fot your first skateboard jump
 						</v-card-text>
 
@@ -281,7 +289,7 @@
 							</v-badge>
 						</v-card-subtitle>
 
-						<v-card-text class="text--primary pb-0">
+						<v-card-text class="text--primary pb-0 text-truncate">
 							Tips to playing skateboard on the ramp
 						</v-card-text>
 
@@ -328,7 +336,7 @@
 							</v-badge>
 						</v-card-subtitle>
 
-						<v-card-text class="text--primary pb-0">
+						<v-card-text class="text--primary pb-0 text-truncate">
 							How to to getting started with skateboard
 						</v-card-text>
 
@@ -355,7 +363,7 @@
 	.position-avatar-card {
 		position: absolute; 
 		right: 25px; 
-		bottom: 35%;
+		bottom: 28%;
 	}
 
 	@media only screen and (max-width: 950px) {
@@ -370,7 +378,7 @@
 		.position-avatar-card {
 			position: absolute; 
 			right: 25px; 
-			bottom: 12%;
+			bottom: 10%;
 		}
 	}
 
@@ -378,7 +386,7 @@
 		.position-avatar-card {
 			position: absolute; 
 			right: 25px; 
-			bottom: 20%;
+			bottom: 18%;
 		}
 	}
 </style>

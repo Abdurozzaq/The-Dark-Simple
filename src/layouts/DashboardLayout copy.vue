@@ -1,14 +1,12 @@
 <template>
 	<v-app id="inspire">
 		<v-navigation-drawer
-      dark
-      color="#1f1d2c"
-      v-model="drawer"
-      app
-			floating
-    >
-
-      <h2 class="my-4 text-center white--text francois-one">TheDarkSimple</h2>
+			v-model="drawer"
+			app
+			bottom
+			color="#1f1d2c"
+		>
+			<h2 class="my-4 text-center white--text francois-one">TheDarkSimple</h2>
 
 			<v-list flat dense class="ml-5">
 				<v-subheader>MENU</v-subheader>
@@ -55,16 +53,15 @@
 			<div class="text-subtitle-2 text-center">Coded By <a href="https://github.com/Abdurozzaq">Abdurozzaq Nurul Hadi</a></div>
 
 			<div class="text-subtitle-2 text-center">Images By <a href="https://unsplash.com/s/photos/skateboard">Unsplash</a></div>
+				
+		</v-navigation-drawer>
 
-    </v-navigation-drawer>
-
-    <v-app-bar
-      app
-      color="#1f1d2c"
-      dark
-			elevation="0"
-    >
-     <v-container class="py-0 ml-0 fill-height">
+		<v-app-bar 
+			app 
+			flat
+			color="#1f1d2c"
+		>	
+			<v-container class="py-0 ml-0 fill-height">
 
 				<v-app-bar-nav-icon class="mr-2 x-small" v-if="$vuetify.breakpoint.smAndDown" @click="drawer = !drawer"></v-app-bar-nav-icon>
 
@@ -181,10 +178,49 @@
 					</v-list>
 				</v-menu>
 			</v-container>
-    </v-app-bar>
-    <v-main class="back-color">
+
+		</v-app-bar>
+
+		<v-main class="back-color">
 			<router-view />
 		</v-main>
+
+		<v-dialog
+      v-model="cari"
+      width="500"
+    >
+      <v-card>
+        <v-card-title class="text-h5 back-color-card">
+          Search something here
+        </v-card-title>
+
+        <v-card-text>
+          <v-text-field
+						width="$vuetify.breakpoint.smAndDown ? 64px : 300px"
+						dense
+						flat
+						hide-details
+						rounded
+						solo-inverted
+						label="Enter you keyword"
+						append-icon="mdi-magnify"
+					></v-text-field>
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            text
+            @click="cari = false"
+          >
+            Search it
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
 	</v-app>
 </template>
 
@@ -257,45 +293,37 @@
 </style>
 
 <style type="text/css">
-
 ::-webkit-scrollbar {
-		overflow: visible;
-	}
-
-@media only screen and (max-width: 950px) {
-	::-webkit-scrollbar {
-		width: 4px;
-		height: 4px;
-	}
-	::-webkit-scrollbar-button {
-		width: 0px;
-		height: 0px;
-	}
-	::-webkit-scrollbar-thumb {
-		background: #e1e1e1;
-		border: 0px none #ffffff;
-		border-radius: 50px;
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background: #ffffff;
-	}
-	::-webkit-scrollbar-thumb:active {
-		background: #000000;
-	}
-	::-webkit-scrollbar-track {
-		background: #666666;
-		border: 0px none #ffffff;
-		border-radius: 50px;
-	}
-	::-webkit-scrollbar-track:hover {
-		background: #666666;
-	}
-	::-webkit-scrollbar-track:active {
-		background: #333333;
-	}
-	::-webkit-scrollbar-corner {
-		background: transparent;
-	}
+  width: 2px;
+  height: 2px;
 }
-
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 </style>
