@@ -75,7 +75,7 @@
 						<v-img
 							src="/img/img2.jpg"
 							:aspect-ratio="$vuetify.breakpoint.smAndDown ? 2/0.5 : 1/0.8"
-							gradient="to top right, rgba(100,115,201,.33), rgba(25,32,72,.7)"
+							gradient="to top right, rgba(64,74,87,0.4318102240896359) 0%, rgba(46,52,61,0.4290091036414566) 100%"
 						>
 							<v-card-text class="pb-0">
 								<v-row v-if="$vuetify.breakpoint.smAndDown">
