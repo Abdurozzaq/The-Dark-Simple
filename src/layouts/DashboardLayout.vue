@@ -186,6 +186,41 @@
     <v-main class="back-color">
 			<router-view />
 		</v-main>
+
+		<v-dialog
+      v-model="cari"
+      width="500"
+    >
+      <v-card>
+        <v-card-title class="text-h5 back-color-card">
+          Search something here
+        </v-card-title>
+
+        <v-card-text>
+          <v-text-field
+						width="$vuetify.breakpoint.smAndDown ? 64px : 300px"
+						dense
+						flat
+						hide-details
+						rounded
+						solo-inverted
+						label="Enter your keyword"
+						append-icon="mdi-magnify"
+					></v-text-field>
+        </v-card-text>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            text
+            @click="cari = false"
+          >
+            Search it
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
 	</v-app>
 </template>
 
